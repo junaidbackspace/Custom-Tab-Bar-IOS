@@ -1,20 +1,16 @@
-//
-//  CustomTabBar.swift
-//  expense mgt
-//
-//  Created by Umer Farooq on 07/09/2024.
-//
 import UIKit
 
 class CustomTabBar: UITabBar {
-
     
     private var shapeLayer: CALayer?
+    private var selectionCircle = UIView()
     private let plusButton = UIButton()
 
     override func draw(_ rect: CGRect) {
+        super.draw(rect)
         addShape()
-        setupPlusButton()
+        setupSelectionLine() // Add selected tab  Line
+       
     }
 
     private func addShape() {
@@ -52,39 +48,48 @@ class CustomTabBar: UITabBar {
         return path.cgPath
     }
 
-    private func setupPlusButton() {
-        plusButton.setImage(UIImage(systemName: "plus"), for: .normal)
-        plusButton.frame.size = CGSize(width: 50, height: 50)
-        plusButton.center = CGPoint(x: self.frame.width / 2, y: 0)
-        plusButton.tintColor = .blue
-        plusButton.backgroundColor = .white
-        plusButton.layer.cornerRadius = 25 // make it circular
-        plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
-
-        self.addSubview(plusButton)
+    private func setupSelectionLine() {
+        let circleSize: CGFloat = 30.0
+        selectionCircle.frame.size = CGSize(width: circleSize, height: 2)
+        selectionCircle.backgroundColor = UIColor.blue.withAlphaComponent(0.8)
+        
+        selectionCircle.center = CGPoint(x: 45, y: 50) // Start at first tab position
+        self.addSubview(selectionCircle)
     }
 
-    @objc private func plusButtonTapped() {
+    private func moveSelectionLine(to tabIndex: Int) {
+        guard let items = self.items, tabIndex < items.count else { return }
+        let tabWidth = self.frame.width / CGFloat(items.count)
+        let newCenterX = tabWidth * CGFloat(tabIndex) + tabWidth / 2
+        UIView.animate(withDuration: 0.3) {
+            self.selectionCircle.center.x = newCenterX
+        }
+    }
+
+
+ 
+
+    func MoveplusButtonScreen() {
         print("Plus button clicked")
-        animatePlusButton()
-    }
-
-    private func animatePlusButton() {
-        // First scale up (bounce effect)
-        UIView.animate(withDuration: 0.2, animations: {
-            self.plusButton.transform = CGAffineTransform(scaleX: 1.2, y: 1.2) // scale up
-        }) { _ in
-            // Then scale down (return to slightly smaller size)
-            UIView.animate(withDuration: 0.2, animations: {
-                self.plusButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9) // scale down slightly
-            }) { _ in
-                // Finally, bring it back to normal size
-                UIView.animate(withDuration: 0.2) {
-                    self.plusButton.transform = .identity // return to original size
+        
+        // Assuming the view controller's storyboard ID is "plusbuttonScreen"
+        let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
+        if let newViewController = storyboard.instantiateViewController(withIdentifier: "plusbuttonScreen") as? PlusbuttonScreenViewController {
+            print("View controller initialized")
+            
+            // Find the current navigation controller and push the view controller
+            if let topController = UIApplication.shared.windows.first?.rootViewController as? UITabBarController {
+                if let navigationController = topController.selectedViewController as? UINavigationController {
+                    navigationController.pushViewController(newViewController, animated: false)
                 }
             }
         }
     }
 
 
+ 
+  
+    func updateLinePosition(selectedIndex: Int) {
+        moveSelectionLine(to: selectedIndex)
+    }
 }

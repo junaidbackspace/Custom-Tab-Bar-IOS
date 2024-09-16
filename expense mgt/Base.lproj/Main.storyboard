@@ -31,12 +31,24 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="expense_mgt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qI-dQ-jNd">
+                                <rect key="frame" x="154" y="332" width="106" height="52"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" red="0.054580618060000002" green="0.26592635180000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2qI-dQ-jNd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Wp8-qz-6TP"/>
+                            <constraint firstItem="2qI-dQ-jNd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hYp-iP-Co4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="84l-vn-O7H"/>
                 </viewController>
@@ -51,14 +63,26 @@
                     <view key="view" contentMode="scaleToFill" id="5DY-bh-HtS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Challenges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E10-RA-MzM">
+                                <rect key="frame" x="129" y="343" width="204" height="46"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" red="0.054580618060000002" green="0.26592635180000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yFW-Xr-V33"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E10-RA-MzM" firstAttribute="centerX" secondItem="yFW-Xr-V33" secondAttribute="centerX" id="Szm-9q-kFF"/>
+                            <constraint firstItem="E10-RA-MzM" firstAttribute="centerY" secondItem="yFW-Xr-V33" secondAttribute="centerY" id="ghs-jN-qpw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gs9-A2-SVK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Auh-7a-j0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="946"/>
+            <point key="canvasLocation" x="1124.6376811594205" y="945.53571428571422"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yTo-64-DUB">
@@ -67,14 +91,26 @@
                     <view key="view" contentMode="scaleToFill" id="gQS-Ze-MEo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff1-Dx-B1S">
+                                <rect key="frame" x="143" y="346" width="126" height="46"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" red="0.054580618060000002" green="0.26592635180000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q4A-f7-Vcg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ff1-Dx-B1S" firstAttribute="centerX" secondItem="Q4A-f7-Vcg" secondAttribute="centerX" id="ZLR-M3-ZHY"/>
+                            <constraint firstItem="ff1-Dx-B1S" firstAttribute="centerY" secondItem="Q4A-f7-Vcg" secondAttribute="centerY" id="bth-vM-eHE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YXy-Sm-N9i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISM-DX-5tC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="946"/>
+            <point key="canvasLocation" x="140.57971014492756" y="945.53571428571422"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ifq-Gv-dfC">
@@ -83,8 +119,20 @@
                     <view key="view" contentMode="scaleToFill" id="pkK-dq-fN7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmr-0R-3C2">
+                                <rect key="frame" x="105" y="425" width="204" height="46"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" red="0.054580618060000002" green="0.26592635180000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Z9I-9n-zeJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pmr-0R-3C2" firstAttribute="centerY" secondItem="Z9I-9n-zeJ" secondAttribute="centerY" id="WHB-XU-Duz"/>
+                            <constraint firstItem="Pmr-0R-3C2" firstAttribute="centerX" secondItem="Z9I-9n-zeJ" secondAttribute="centerX" id="yeC-OU-gPM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YLx-VP-q2k"/>
                 </viewController>
@@ -164,10 +212,41 @@
             </objects>
             <point key="canvasLocation" x="1414" y="177"/>
         </scene>
+        <!--Plusbutton Screen View Controller-->
+        <scene sceneID="bmB-Ds-0kR">
+            <objects>
+                <viewController storyboardIdentifier="plusbuttonScreen" id="rkj-cM-Tc3" customClass="PlusbuttonScreenViewController" customModule="expense_mgt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="smf-5B-Cb4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8L6-Ue-6ye">
+                                <rect key="frame" x="87" y="353.5" width="240" height="199"/>
+                                <color key="tintColor" red="0.054580618060000002" green="0.26592635180000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="rAs-qj-0Vg"/>
+                                    <constraint firstAttribute="width" constant="240" id="zuC-Uf-Me7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vJ0-nU-V5Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8L6-Ue-6ye" firstAttribute="centerX" secondItem="vJ0-nU-V5Z" secondAttribute="centerX" id="MGu-18-vmp"/>
+                            <constraint firstItem="8L6-Ue-6ye" firstAttribute="centerY" secondItem="vJ0-nU-V5Z" secondAttribute="centerY" id="wEQ-LB-hv5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JpF-ZO-rZz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ba-95-YvI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="1708"/>
+        </scene>
     </scenes>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="smiley" catalog="system" width="128" height="121"/>
         <image name="sparkles" catalog="system" width="112" height="128"/>
         <image name="target" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
