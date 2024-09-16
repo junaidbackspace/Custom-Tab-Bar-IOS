@@ -10,14 +10,15 @@ class CustomTabBar: UITabBar {
         super.draw(rect)
         addShape()
         setupSelectionLine() // Add selected tab  Line
+        
        
     }
 
     private func addShape() {
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = createPath()
-        shapeLayer.strokeColor = UIColor.gray.cgColor
-        shapeLayer.fillColor = UIColor.cyan.withAlphaComponent(0.15).cgColor
+        shapeLayer.strokeColor = UIColor.systemPink.cgColor
+        shapeLayer.fillColor = UIColor.gray.withAlphaComponent(0.2).cgColor
         shapeLayer.lineWidth = 1.0
 
         if let oldShapeLayer = self.shapeLayer {
@@ -51,7 +52,7 @@ class CustomTabBar: UITabBar {
     private func setupSelectionLine() {
         let circleSize: CGFloat = 30.0
         selectionCircle.frame.size = CGSize(width: circleSize, height: 2)
-        selectionCircle.backgroundColor = UIColor.blue.withAlphaComponent(0.8)
+        selectionCircle.backgroundColor = UIColor.systemPink.withAlphaComponent(0.8)
         
         selectionCircle.center = CGPoint(x: 45, y: 50) // Start at first tab position
         self.addSubview(selectionCircle)
@@ -90,6 +91,7 @@ class CustomTabBar: UITabBar {
  
   
     func updateLinePosition(selectedIndex: Int) {
+        print("Updating line position :\(selectedIndex)")
         moveSelectionLine(to: selectedIndex)
     }
 }
