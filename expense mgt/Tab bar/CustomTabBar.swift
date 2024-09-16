@@ -18,7 +18,7 @@ class CustomTabBar: UITabBar {
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = createPath()
         shapeLayer.strokeColor = UIColor.systemPink.cgColor
-        shapeLayer.fillColor = UIColor.gray.withAlphaComponent(0.2).cgColor
+        shapeLayer.fillColor = UIColor.systemRed.withAlphaComponent(0.2).cgColor
         shapeLayer.lineWidth = 1.0
 
         if let oldShapeLayer = self.shapeLayer {
